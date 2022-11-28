@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <th>id</th>
+        <th>ime</th>
+        <th>prezime</th>
+        <th>brojIndeksa</th>
+        <th>datumRodjenja</th>
+        <th>ulica</th>
+        <th>grad</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students; let i = index">
+            <td>{{student.id}}</td>
+            <td>{{student.ime}}</td>
+            <td>{{student.prezime}}</td>
+            <td>{{student.brojIndeksa}}</td>
+            <td>{{student.datumRodjenja}}</td>
+            <td>{{student.ulica}}</td>
+            <td>{{student.grad}}</td>
+            <td>
+            <button (click)="deleteStudentById(student.id,i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
